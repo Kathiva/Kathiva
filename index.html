@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vianova</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            Vianova
+        </a>
+
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#productos">Productos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#beneficios">Beneficios</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+    <section id="inicio" class="hero">
+
+        <div class="container">
+
+            <h1>Vianova</h1>
+
+            <p>
+                Farmacia natural para el bienestar de toda la familia
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="beneficios" class="seccion">
+
+        <div class="container">
+
+            <h2 class="text-center">
+                ¿Por qué elegir Vianova?
+            </h2>
+
+            <div class="row mt-4">
+
+                <div class="col-md-4 text-center">
+
+                    <h4>Natural</h4>
+
+                    <p>
+                        Productos naturales seleccionados cuidadosamente para proteger a su familia.
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 text-center">
+
+                    <h4>Calidad</h4>
+
+                    <p>
+                        Trabajamos con productos confiables y seguros.
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 text-center">
+
+                    <h4>Atención</h4>
+
+                    <p>
+                        Asesoría personalizada para cada cliente.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="productos" class="seccion bg-light">
+
+        <div class="container">
+
+            <h2 class="text-center">
+                Productos Destacados
+            </h2>
+
+            <div class="row mt-4">
+
+                <div class="col-md-4">
+
+                   
+                    <div class="card">
+
+    <img src="img/moringa.jpg"
+         class="card-img-top"
+         alt="Moringa Premium">
+ <div class="card-body text-center">   
+                        <h3>Moringa Premium</h3>
+    
+                            <p>
+                                Refuerza el sistema inmunológico.
+                            </p>
+
+                            <h4>$14.99</h4>
+<button class="btn btn-success mt-2"
+onclick="agregarProducto('Moringa Premium',14.99)">
+Agregar al carrito
+</button>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    
+                    <div class="card">
+
+    <img src="img/colageno.jpg"
+         class="card-img-top"
+         alt="Colágeno Hidrolizado">
+<div class="card-body text-center">
+
+                        <h4>Colágeno Hidrolizado</h4>
+                                                    
+                            <p>
+                                Apoya piel y articulaciones.
+                            </p>
+
+                            <h4>$24.99</h4>
+<button class="btn btn-success mt-2"
+onclick="agregarProducto('Colágeno Hidrolizado',24.99)">
+Agregar al carrito
+</button>
+                            
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+               
+               <div class="col-md-4">
+
+    <div class="card">
+
+    <img src="img/te-detox.jpg"
+         class="card-img-top"
+         alt="Té Detox">
+
+    <div class="card-body text-center">
+
+        <h5>Té Detox</h5>
+
+            <p>
+                Desintoxicación natural.
+            </p>
+
+            <h4>$8.99</h4>
+
+            <button class="btn btn-success mt-2"
+            onclick="agregarProducto('Té Detox',8.99)">
+                Agregar al carrito
+            </button>             
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<section id="pedido" class="seccion">
+
+    <div class="container">
+
+        <h2 class="text-center">
+            Realizar Pedido
+        </h2>
+
+        <div id="carrito" class="mb-3">
+
+            <h4>Productos seleccionados</h4>
+
+            <ul id="listaCarrito"></ul>
+
+            <h4>
+                Total:
+                $<span id="total">0.00</span>
+            </h4>
+
+        </div>
+
+        <input
+            type="text"
+            id="nombre"
+            class="form-control mb-2"
+            placeholder="Nombre completo">
+
+        <input
+            type="tel"
+            id="telefono"
+            class="form-control mb-2"
+            placeholder="Teléfono">
+
+        <textarea
+            id="direccion"
+            class="form-control mb-3"
+            placeholder="Dirección de entrega">
+        </textarea>
+
+        <h5>Método de pago</h5>
+
+        <div class="form-check">
+
+            <input class="form-check-input"
+                type="radio"
+                name="pago"
+                value="Transferencia"
+                checked>
+
+            <label class="form-check-label">
+                Transferencia Bancaria
+            </label>
+
+        </div>
+
+        <div class="form-check">
+
+            <input class="form-check-input"
+                type="radio"
+                name="pago"
+                value="Contra Entrega">
+
+            <label class="form-check-label">
+                Contra Entrega
+            </label>
+
+        </div>
+
+        <div id="datosTransferencia"
+             class="alert alert-warning mt-3">
+
+            <strong>Datos Bancarios</strong><br>
+
+            Banco Pichincha<br>
+            Cuenta: 123456789<br>
+            Titular: Vianova
+
+        </div>
+
+        <button
+            class="btn btn-success btn-lg mt-3"
+            onclick="enviarWhatsApp()">
+
+            Finalizar Pedido
+
+        </button>
+
+    </div>
+
+</section>
+    
+
+    <section id="contacto" class="seccion">
+
+        <div class="container text-center">
+
+            <h2>Contacto</h2>
+
+            <p>WhatsApp: +593 99 999 9999</p>
+
+            <p>ventas-vianova@gmail.com</p>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        © 2026 Vianova
+   
+    </footer>
+     <script src="script.js"></script>
+  <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+
+</html>
