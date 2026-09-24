@@ -1,14 +1,14 @@
 // ===================================
-// Vianova - Script principal
+// Kathiva - Script principal
 // ===================================
 
-alert("JavaScript funcionando");
-console.log("Vianova cargada correctamente");
+// alert("JavaScript funcionando");
+// console.log("Vianova cargada correctamente");
 
 // Mensaje de bienvenida
-window.addEventListener("load", function () {
-    console.log("Sitio cargado correctamente");
-});
+// window.addEventListener("load", function () {
+//    console.log("Sitio cargado correctamente");
+// });
 
 // ===================================
 // Carrito de compras
@@ -204,7 +204,7 @@ if(telefono.trim() === ""){
     });
 
     const mensaje =
-`*PEDIDO VIANOVA*
+`*Pedido Kathiva*
 
 Cliente: ${nombre}
 
